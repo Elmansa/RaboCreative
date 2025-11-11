@@ -1,0 +1,72 @@
+:root{
+  --navy:#003cff;
+  --card:#ffffff;
+  --accent:#e53935; /* قرمز */
+  --muted:#c5cbd3;
+  --white:#ffffff;
+  --glass: rgba(255,255,255,0.04);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;padding:0;font-family: "IranSans", "Segoe UI", Tahoma, sans-serif;direction:rtl;background:linear-gradient(180deg,var(--navy),#051122);color:var(--white);-webkit-font-smoothing:antialiased}
+
+/* HEADER */
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:linear-gradient(0deg, rgba(0,0,0,0.2), transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:70px;height:auto;border-radius:10px;background:transparent;display:flex;align-items:center;justify-content:center;font-weight:900;color:white;font-size:18px;box-shadow:0 6px 20px rgba(229,57,53,0.12)}
+.site-title{font-weight:800}
+nav a{margin:0 10px;color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;transition:all .18s}
+nav a:hover{color:var(--white);background:rgba(255,255,255,0.02);transform:translateY(-3px)}
+
+/* container */
+.container{max-width:1150px;margin:30px auto;padding:0 18px}
+
+/* HERO */
+.hero{display:flex;gap:28px;align-items:center;background:linear-gradient(90deg, rgba(229,57,53,0.02), transparent);padding:36px;border-radius:14px;box-shadow:0 10px 40px rgba(2,6,23,0.6);animation:fadeInUp .7s ease both}
+.hero-left{flex:1}
+.hero h1{margin:0;font-size:40px;color:var(--accent);letter-spacing:0.6px}
+.hero p{color:var(--muted);line-height:1.8;margin-top:12px}
+.cta{display:inline-block;margin-top:18px;background:var(--accent);color:var(--white);padding:10px 18px;border-radius:10px;font-weight:700;transition:transform .18s}
+.cta:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(229,57,53,0.12)}
+.hero-right{width:380px}
+.hero-cover{width:100%;height:260px;border-radius:12px;object-fit:cover;box-shadow:0 10px 40px rgba(0,0,0,0.6);transform:translateY(6px);transition:transform .4s}
+.hero-cover:hover{transform:translateY(0)}
+
+/* PORTFOLIO GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;margin-top:28px}
+.card{background:var(--card);border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(2,6,23,0.6);overflow:hidden;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(3,8,30,0.75)}
+.card .thumb{width:100%;height:160px;border-radius:8px;object-fit:cover;display:block}
+.card .meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.card .title{font-weight:800}
+.card .type{font-size:13px;color:var(--muted);padding:6px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
+
+/* LITEBOX / PLAYER */
+.lightbox{
+  position:fixed;left:0;top:0;right:0;bottom:0;display:none;align-items:center;justify-content:center;
+  background:linear-gradient(0deg, rgba(2,6,23,0.9), rgba(2,6,23,0.95));z-index:9999;padding:30px;
+}
+.lb-inner{width:100%;max-width:1000px;background:var(--card);border-radius:12px;overflow:hidden;animation:scaleIn .25s ease both;box-shadow:0 30px 80px rgba(0,0,0,0.8)}
+.lb-media{background:#000;display:flex;align-items:center;justify-content:center;min-height:420px;position:relative}
+.lb-media img, .lb-media iframe{width:100%;height:100%;object-fit:contain;border:0}
+.lb-info{padding:18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.lb-title{font-weight:800}
+.lb-desc{color:var(--muted);font-size:14px;max-width:60%}
+.lb-controls{display:flex;gap:10px;align-items:center}
+.lb-btn{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 10px;border-radius:8px;color:var(--muted);cursor:pointer}
+.lb-btn.primary{background:var(--accent);color:white;border:none}
+
+/* bottom small hints */
+.hint{color:var(--muted);font-size:13px;margin-top:8px}
+
+/* footer */
+footer{margin-top:60px;padding:30px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+
+/* animations */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.98)}to{opacity:1;transform:scale(1)}}
+@media (max-width:800px){
+  .hero{flex-direction:column}
+  .hero-right{width:100%}
+  .lb-info{flex-direction:column;align-items:flex-start}
+}
