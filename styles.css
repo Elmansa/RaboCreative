@@ -8,7 +8,7 @@
 }
 
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;padding:0;font-family: "IranSans", "Segoe UI", Tahoma, sans-serif;direction:rtl;background:linear-gradient(180deg,var(--navy),#051122);color:var(--white);-webkit-font-smoothing:antialiased}
+html,body{height:100%;margin:0;padding:0;font-family: "IranSans", "Segoe UI", Tahoma, sans-serif;direction:rtl;background:linear-gradient(180deg,var(--navy),#051122);color:var(#000000);-webkit-font-smoothing:antialiased}
 
 /* HEADER */
 header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:linear-gradient(0deg, rgba(0,0,0,0.2), transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
