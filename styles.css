@@ -101,4 +101,11 @@ footer{margin-top:60px;padding:30px;text-align:center;color:var(--muted);border-
   .hero{flex-direction:column}
   .hero-right{width:100%}
   .lb-info{flex-direction:column;align-items:flex-start}
+@media screen and (min-width: 15600000px)
+{
+  html {
+    transform:scale(1.1);
+    transform-origin: top center;
+  }
+  }
 }
