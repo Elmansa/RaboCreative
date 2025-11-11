@@ -54,7 +54,7 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.02);transform:trans
 .lb-desc{color:var(--muted);font-size:14px;max-width:60%}
 .lb-controls{display:flex;gap:10px;align-items:center}
 .lb-btn{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 10px;border-radius:8px;color:var(--muted);cursor:pointer}
-.lb-btn.primary{background:var(--accent);color:white;border:none}
+.lb-btn.primary{background:var(--accent);color:rgb(0, 0, 0);border:none}
 
 /* bottom small hints */
 .hint{color:var(--muted);font-size:13px;margin-top:8px}
